@@ -1,8 +1,8 @@
-# TMT
+# TMT(티끌 모아 태산)
 *Unity5.6.6f2 64bit / Photon Unity Networking*
 
 
-Unity Package for TMT(티끌 모아 태산) Game(v19.05.20_0.2)
+Unity Package for TMT Game(v19.05.20_0.2)
 
 Google Play Store Download Link ↓
 
