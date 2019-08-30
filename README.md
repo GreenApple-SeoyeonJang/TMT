@@ -11,3 +11,8 @@ Online Board Game
 Google Play Store Download Link ↓
 
 https://play.google.com/store/apps/details?id=com.GreenApple.TMT
+
+
+More Information ↓
+
+https://greenapple16.tistory.com/4?category=811351
