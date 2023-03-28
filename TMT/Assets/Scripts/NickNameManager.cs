@@ -6,7 +6,7 @@ using Photon;
 
 public class NickNameManager : Photon.PunBehaviour
 {
-    public GameObject MyCharacter;
+    public GameObject Characters;
     public InputField userId;
     public GameObject ChangeNickNamePanel;
     public AudioClip OkButtonClickSound;
@@ -14,6 +14,7 @@ public class NickNameManager : Photon.PunBehaviour
     // Use this for initialization
     void Start () {
         userId.text = GetUserId();
+        ChangeNickNamePanel.SetActive(true); // 처음 setActive시 안보이는 오류 있어서 미리 한번 보이게 함
         ChangeNickNamePanel.SetActive(false);
     }
 	
@@ -37,7 +38,7 @@ public class NickNameManager : Photon.PunBehaviour
     {
         this.GetComponent<AudioSource>().clip = OkButtonClickSound;
         this.GetComponent<AudioSource>().Play();
-        MyCharacter.SetActive(false);
+        //Characters.SetActive(false);
         ChangeNickNamePanel.SetActive(true);
     }
 
@@ -47,7 +48,7 @@ public class NickNameManager : Photon.PunBehaviour
         this.GetComponent<AudioSource>().Play();
         PhotonNetwork.player.NickName = userId.text;
         PlayerPrefs.SetString("USER_ID", userId.text);
-        MyCharacter.SetActive(true);
+        Characters.SetActive(true);
         ChangeNickNamePanel.SetActive(false);
     }
 
@@ -55,7 +56,7 @@ public class NickNameManager : Photon.PunBehaviour
     {
         this.GetComponent<AudioSource>().clip = OkButtonClickSound;
         this.GetComponent<AudioSource>().Play();
-        MyCharacter.SetActive(true);
+        Characters.SetActive(true);
         ChangeNickNamePanel.SetActive(false);
     }
 
